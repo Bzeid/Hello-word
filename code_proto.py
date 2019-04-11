@@ -202,7 +202,7 @@ def data_personal(pdfDir,outputDir):
                 data_glob.append(extraction)
     data_glob=pd.concat(data_glob)
     data_glob.to_csv(os.path.join(outputDir,'personaldata.csv'))
-    textFile = open(os.path.join(outputDir,'file_with_personal_information.txt'), "w") #make text file
+    textFile = open(os.path.join(outputDir,'file_with_personal.txt'), "w") #make text file
     for name in list_file:
         textFile.write(name.replace('/','\\')+'\n') #write text to text file
     textFile.close()
